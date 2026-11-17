@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------
+# UNITED outputs
+#
+# Each output is one entry starting with "- type:".
+# To add one: copy an entry, paste it, and change the details.
+#
+#   type:    a short label (Preprint, Paper, Video, Slides, Poster, Report)
+#   title:   the full title, in quotes
+#   where:   journal, server or event (optional)
+#   when:    the date as you want it shown, e.g. "November 2026"
+#   link:    the web address. Leave as "" if it isn't ready yet.
+#            For a file stored in this repository, use a path like
+#            "/assets/files/my-file.pdf".
+#   status:  available    -> shown in the main list
+#            coming-soon  -> shown under "Coming soon"
+#
+# Available items are shown in the order they appear here,
+# so put the newest at the top.
+# ---------------------------------------------------------------
+
+- type: Video
+  title: "Lunch and Learn: how routine data can be used to better understand the needs of people who use drugs and/or alcohol"
+  where: "Online event with the NIHR Public Health Policy Research Unit"
+  when: "16 November 2026"
+  link: ""          # set recording_url in _config.yml instead; it is used here automatically
+  use: recording
+  status: available
+
+- type: Slides
+  title: "Lunch and Learn slides"
+  where: "Online event"
+  when: "16 November 2026"
+  link: ""          # set slides_url in _config.yml instead; it is used here automatically
+  use: slides
+  status: available
+
+- type: Poster
+  title: "Increasing systematic and proportionate research access to the National Drug and Alcohol Treatment Monitoring System (NDTMS) could improve its public value"
+  where: "Society for the Study of Addiction (SSA) conference 2026 · Adams et al."
+  when: "2026"
+  link: "/assets/files/UNITED-SSA-2026-poster.pdf"
+  status: available
+
+- type: Preprint
+  title: "Research using the National Drug and Alcohol Treatment Monitoring System (NDTMS) in England: a scoping review of surveillance, analysis, and linkage (2005–2026)"
+  where: "SSRN preprint · Yang, Roberts, Roman-Urrestarazu, et al."
+  when: "2026"
+  link: "https://doi.org/10.2139/ssrn.7505399"
+  status: available
+
+# ---- Coming soon ----
+
+- type: Paper
+  title: "Scoping review of NDTMS research (peer-reviewed version)"
+  status: coming-soon
+
+- type: Paper
+  title: "Qualitative study of how NDTMS data are collected and used in practice"
+  status: coming-soon
+
+- type: Report
+  title: "Recommendations for improving NDTMS, co-created at the UNITED workshops"
+  status: coming-soon

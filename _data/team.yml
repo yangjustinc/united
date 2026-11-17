@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------
+# UNITED team
+#   name, institution: shown on the card
+#   photo: file name in assets/team/ (leave "" to show initials)
+#   link: institutional profile page (leave "" for none)
+# ---------------------------------------------------------------
+
+people:
+  - name: Emma Adams
+    institution: Newcastle University
+    photo: emma-adams.jpg
+    link: "https://www.ncl.ac.uk/medical-sciences/people/profile/emmaadams.html"
+  - name: Jo Kesten
+    institution: University of Bristol
+    photo: jo-kesten.jpg
+    link: "https://www.bristol.ac.uk/people/person/Jo-Kesten-e3310ced-90c5-433c-871a-8ded23de517c/"
+  - name: William McGovern
+    institution: Northumbria University
+    photo: william-mcgovern.jpg
+    link: "https://www.northumbria.ac.uk/about-us/our-staff/m/william-mcgovern/"
+  - name: Sheena Ramsay
+    institution: Newcastle University
+    photo: sheena-ramsay.jpg
+    link: "https://www.ncl.ac.uk/medical-sciences/people/profile/sheenaramsay.html"
+  - name: Emmert Roberts
+    institution: King's College London
+    photo: emmert-roberts.jpg
+    link: "https://www.kcl.ac.uk/people/emmert-roberts"
+  - name: Andres Roman-Urrestarazu
+    institution: University of Cambridge
+    photo: andres-roman-urrestarazu.jpg
+    link: "https://www.cph.cam.ac.uk/staff/andres-roman-urrestarazu"
+  - name: Jenny Scott
+    institution: University of Bristol
+    photo: jenny-scott.jpg
+    link: "https://www.bristol.ac.uk/people/person/Jenny-Scott-6ac0f6c2-1231-45bb-a758-fa526093581e/"
+  - name: Justin Yang
+    institution: University College London
+    photo: justin-yang.jpg
+    link: "https://profiles.ucl.ac.uk/75514-justin-yang"
+
+# ---------------------------------------------------------------
+# Partner organisations
+#   logo: file name in assets/img/partners/
+#   about: one or two sentences about the organisation
+#   people: names of the people who worked on UNITED (optional)
+# ---------------------------------------------------------------
+
+partners:
+  - name: Change Grow Live
+    logo: change-grow-live.jpg
+    link: "https://www.changegrowlive.org"
+    about: "A national charity running drug and alcohol services across England and Wales, supporting people to make positive changes in their lives."
+    people: ["Jeff Crouch", "Zoë Welch"]
+  - name: Turning Point
+    logo: turning-point.png
+    link: "https://www.turning-point.co.uk"
+    about: "A national social enterprise providing health and social care services, including drug and alcohol treatment, across England."
+    people: ["Mike Smith"]
+
+# ---------------------------------------------------------------
+# People who supported the team's development
+# ---------------------------------------------------------------
+
+support:
+  - name: Katie Cooper
+    role: Team facilitation
+    link: "https://www.linkedin.com/in/katie-cooper-"
+  - name: Hawke Horizons
+    role: Team development
+    link: "https://hawkehorizons.com/"

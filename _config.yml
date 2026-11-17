@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------
+# UNITED website settings
+# Edit the values below on github.com; the site rebuilds itself.
+# ---------------------------------------------------------------
+
+title: UNITED
+long_title: "Using a National, Interdisciplinary Team to Enhance Drug and alcohol treatment data"
+description: >-
+  UNITED brought together researchers, treatment services and people with lived
+  experience to improve how England's national drug and alcohol treatment data
+  are collected and used. Funded by the NIHR Team Science Award (NIHR306655).
+
+# The address of the site. For https://yangjustinc.github.io/united keep these as they are.
+url: "https://yangjustinc.github.io"
+baseurl: "/united"
+
+award_number: NIHR306655
+contact_email: dop-united@ucl.ac.uk
+
+# Link to a sign-up form for people who want to be contacted in future.
+# Leave blank ("") until the form exists; the site then shows the email address instead.
+signup_form_url: ""
+
+# Lunch and Learn recording (OneDrive link, set to "Anyone with the link can view") and slides.
+# A path starting with /assets/ points to a file stored in this repository.
+# Leave blank ("") to show "Link to follow".
+recording_url: "https://liveuclac-my.sharepoint.com/:v:/g/personal/rejujcy_ucl_ac_uk/IQCXSd3jFHWlQa45akhe5BY2AUYkT4j37mzGQr5DA1jVrZQ?e=7R6ToY"
+slides_url: "/assets/files/UNITED-lunch-and-learn-slides-2026-11-16.pdf"
+
+# Files and folders that should not be published.
+exclude:
+  - README.md
+  - .gitignore

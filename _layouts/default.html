@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}: {{ site.long_title }}</title>
+  <meta name="description" content="{{ site.description | strip }}">
+  <meta property="og:title" content="{{ site.title }}: {{ site.long_title }}">
+  <meta property="og:description" content="{{ site.description | strip }}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1c285e">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="UNITED home">
+        <svg class="mark" viewBox="0 0 120 14" aria-hidden="true"><line x1="7" y1="7" x2="113" y2="7"/><circle cx="7" cy="7" r="5"/><circle cx="28" cy="7" r="5"/><circle cx="49" cy="7" r="5"/><circle cx="70" cy="7" r="5"/><circle cx="91" cy="7" r="5"/><circle class="last" cx="113" cy="7" r="5"/></svg>
+        <span>UNITED</span>
+      </a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#findings">Findings</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#recording">Recording</a>
+        <a href="#team">Team</a>
+        <a href="#partners">Partners</a>
+        <a class="nav-cta" href="#contact">Stay in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+{{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="foot-fund">
+        <img src="{{ '/assets/img/nihr-funded-by.png' | relative_url }}" alt="Funded by NIHR (National Institute for Health and Care Research)" width="300" height="86">
+        <p>This study/project is funded by the NIHR Team Science Award ({{ site.award_number }}). The views expressed are those of the author(s) and not necessarily those of the NIHR, the NHS or the Department of Health and Social Care.</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h2>If you need support</h2>
+          <p>If drug or alcohol use is affecting you or someone close to you, free and confidential help is available.</p>
+          <ul>
+            <li><a href="https://www.talktofrank.com">FRANK</a>: drug information and advice, 24 hours a day</li>
+            <li><a href="https://www.nhs.uk/live-well/addiction-support/drug-addiction-getting-help/">NHS: getting help for drug addiction</a></li>
+            <li><a href="https://www.nhs.uk/live-well/alcohol-advice/alcohol-support/">NHS: alcohol support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+          <p class="foot-meta">This site uses no cookies or tracking.<br>Last updated {{ site.time | date: "%-d %B %Y" }}.</p>
+          <p class="foot-meta"><a href="#main">Back to top ↑</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Copy-to-clipboard for the email address
+    document.querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var done = function () { var o = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = o; }, 1600); };
+        if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done).catch(function () {}); }
+      });
+    });
+  </script>
+</body>
+</html>
