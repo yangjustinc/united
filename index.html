@@ -3,303 +3,236 @@ layout: default
 ---
 <!-- =============================================================
      UNITED home page. Each section below is marked with a comment.
+     Most sections have the heading on the left (<h2>) and the
+     content on the right (<div class="body">).
      Outputs and team come from _data/outputs.yml and _data/team.yml.
      Links for the recording, slides and sign-up form are in _config.yml.
      ============================================================= -->
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="inner hero-grid">
-    <div class="hero-text">
-      <p class="code">NIHR Team Science Award · {{ site.award_number }} · 2026</p>
-      <h1>Better drug and alcohol treatment data, <mark>shaped by the people it describes.</mark></h1>
-      <p class="lede">UNITED brought together researchers, treatment services and people with lived experience of drug and alcohol treatment to find ways to improve England's national treatment data system.</p>
-      <div class="actions">
-        <a class="btn" href="#recording">Watch the Lunch and Learn</a>
-        <a class="btn btn-alt" href="#contact">Stay in touch</a>
-      </div>
-      <div class="faces" aria-label="The UNITED team">
-        <div class="face-row">
-          {% for p in site.data.team.people %}<img src="{{ '/assets/team/' | append: p.photo | relative_url }}" alt="" width="40" height="40" loading="lazy">{% endfor %}
-        </div>
-        <p>{{ site.data.team.people | size }} researchers, {{ site.data.team.partners | size }} national treatment providers, and advisors with lived experience</p>
-      </div>
-      <a class="with" href="#partners">
-        <span class="code">In partnership with</span>
-        <span class="with-logos">
-          {% for o in site.data.team.partners %}<img src="{{ '/assets/img/partners/' | append: o.logo | relative_url }}" alt="{{ o.name }}" width="56" height="56">{% endfor %}
-        </span>
-      </a>
-    </div>
-
-    <aside class="record" aria-label="UNITED in numbers">
-      <p class="record-head"><span>RECORD</span><span>UNITED · 2026</span></p>
-      <dl>
-        <div><dt>STUDIES_REVIEWED</dt><dd>83</dd><p>NDTMS-based studies published since 2005</p></div>
-        <div><dt>INTERVIEWS</dt><dd>32</dd><p>with treatment staff and people in treatment</p></div>
-        <div><dt>OBSERVATIONS</dt><dd>4</dd><p>in-service visits to treatment services</p></div>
-        <div><dt>REGIONS</dt><dd>3</dd><p>South West, North East and London</p></div>
-      </dl>
-    </aside>
+<!-- ===== INTRODUCTION ===== -->
+<section class="intro">
+  <div class="inner">
+    <h1>Better drug and alcohol treatment data, shaped by the people it describes</h1>
+    <p class="lede">UNITED brought together researchers, treatment services and people with lived experience of drug and alcohol treatment to find ways to improve England's national treatment data system.</p>
+    <p class="meta">An NIHR Team Science Award project ({{ site.award_number }}), 2026. {{ site.data.team.people | size }} researchers, working with the national treatment providers Change Grow Live and Turning Point and with advisors with lived experience.</p>
+    <p class="links"><a class="btn" href="#recording">Watch the Lunch and Learn</a> <a href="#findings">Read what we learned</a></p>
+    <p class="acronym"><b>UNITED</b> stands for <i>{{ site.long_title }}</i>.</p>
   </div>
-  <p class="inner acronym"><b>UNITED</b> stands for <i>{{ site.long_title }}</i>.</p>
 </section>
 
 <!-- ===== ABOUT ===== -->
 <section id="about" class="section">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">About the project</p>
-      <h2>What is UNITED?</h2>
-    </div>
-    <div class="about-grid">
-      <div class="prose">
-        <p>Each year, more than 300,000 adults in England get help from drug and alcohol treatment services. Every one of those services records information about the people it supports in the same national data system: the <b>National Drug Treatment Monitoring System (NDTMS)</b>, held by the Office for Health Improvement and Disparities.</p>
-        <p>NDTMS is the only nationally representative record of drug and alcohol treatment in England. It is used to plan and fund services, track trends and evaluate treatment. But it doesn't work as well as it could:</p>
-        <ul class="ticks">
-          <li>staff find it difficult and time-consuming to complete, which takes time away from care</li>
-          <li>researchers and services can't easily access the data</li>
-          <li>it doesn't capture what matters most to people in recovery</li>
-        </ul>
-        <p>UNITED was a 12-month project to find out how NDTMS could be collected and used better, working throughout with Change Grow Live, Turning Point and people with lived experience of treatment.</p>
-      </div>
-      <div class="matters">
-        <h3>Why it matters</h3>
-        <div class="tile t-pink">
-          <b>For people using services</b>
-          <p>Better data can help services respond to individual needs, track recovery in ways that mean something, and offer more personalised support.</p>
-        </div>
-        <div class="tile t-lav">
-          <b>For services and staff</b>
-          <p>Simpler systems free up time for care and give better information for improving treatment.</p>
-        </div>
-        <div class="tile t-sky">
-          <b>For public health</b>
-          <p>Better monitoring can pick up changes in drug and alcohol use sooner, so care can respond sooner too.</p>
-        </div>
-      </div>
+  <div class="inner split">
+    <h2>What is UNITED?</h2>
+    <div class="body">
+      <p>Each year, more than 300,000 adults in England get help from drug and alcohol treatment services. Every one of those services records information about the people it supports in the same national data system: the <b>National Drug Treatment Monitoring System (NDTMS)</b>, held by the Office for Health Improvement and Disparities.</p>
+      <p>NDTMS is the only nationally representative record of drug and alcohol treatment in England. It is used to plan and fund services, track trends and evaluate treatment. But it doesn't work as well as it could:</p>
+      <ul>
+        <li>staff find it difficult and time-consuming to complete, which takes time away from care</li>
+        <li>researchers and services can't easily access the data</li>
+        <li>it doesn't capture what matters most to people in recovery</li>
+      </ul>
+      <p>UNITED was a 12-month project to find out how NDTMS could be collected and used better, working throughout with Change Grow Live, Turning Point and people with lived experience of treatment.</p>
+
+      <h3>Why it matters</h3>
+      <dl class="why">
+        <div><dt>For people using services</dt><dd>Better data can help services respond to individual needs, track recovery in ways that mean something, and offer more personalised support.</dd></div>
+        <div><dt>For services and staff</dt><dd>Simpler systems free up time for care and give better information for improving treatment.</dd></div>
+        <div><dt>For public health</dt><dd>Better monitoring can pick up changes in drug and alcohol use sooner, so care can respond sooner too.</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
 <!-- ===== HOW WE DID IT ===== -->
-<section class="section section-tint">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">How we did it</p>
-      <h2>Three work packages, with lived experience throughout</h2>
+<section class="section">
+  <div class="inner split">
+    <h2>How we did it</h2>
+    <div class="body">
+      <p>Three work packages, with people with lived experience involved throughout.</p>
+      <ol class="rows wp">
+        <li>
+          <span class="row-label">Work package 1</span>
+          <div><h3>Scoping review</h3><p>We reviewed every study we could find that used NDTMS data, to understand its strengths and weaknesses for research, and looked at how other countries monitor treatment.</p></div>
+        </li>
+        <li>
+          <span class="row-label">Work package 2</span>
+          <div><h3>Qualitative study</h3><p>We interviewed 20 staff and 12 people in treatment, and carried out four observations inside treatment services, across the South West, North East and London.</p></div>
+        </li>
+        <li>
+          <span class="row-label">Work package 3</span>
+          <div><h3>Knowledge mobilisation workshops</h3><p>Online and in-person workshops brought people in treatment, providers, charities and policymakers together to co-create recommendations and plan future research.</p></div>
+        </li>
+        <li>
+          <span class="row-label">Throughout</span>
+          <div><h3>Working with people with lived experience</h3><p>People who use or have used drug and alcohol services shaped our questions, reviewed our materials, helped interpret findings and co-created recommendations.</p></div>
+        </li>
+      </ol>
     </div>
-    <ol class="register wp">
-      <li>
-        <span class="code">WP1</span>
-        <div><h3>Scoping review</h3><p>We reviewed every study we could find that used NDTMS data, to understand its strengths and weaknesses for research, and looked at how other countries monitor treatment.</p></div>
-      </li>
-      <li>
-        <span class="code">WP2</span>
-        <div><h3>Qualitative study</h3><p>We interviewed 20 staff and 12 people in treatment, and carried out four observations inside treatment services, across the South West, North East and London.</p></div>
-      </li>
-      <li>
-        <span class="code">WP3</span>
-        <div><h3>Knowledge mobilisation workshops</h3><p>Online and in-person workshops brought people in treatment, providers, charities and policymakers together to co-create recommendations and plan future research.</p></div>
-      </li>
-      <li class="throughout">
-        <span class="code">ALL</span>
-        <div><h3>Working with people with lived experience</h3><p>People who use or have used drug and alcohol services shaped our questions, reviewed our materials, helped interpret findings and co-created recommendations.</p></div>
-      </li>
-    </ol>
   </div>
 </section>
 
 <!-- ===== FINDINGS ===== -->
-<section id="findings" class="section">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">Findings at a glance</p>
-      <h2>What we learned</h2>
-      <p class="sub">From our scoping review of NDTMS research. Full details are in the <a href="#outputs">outputs</a>.</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><span class="num">83</span><p>studies used NDTMS data between 2005 and 2026: 45 journal articles, 34 government outputs and 4 doctoral theses.</p></div>
-      <div class="stat"><span class="num">30%</span><p>of these linked people's NDTMS records to other data, such as hospital, mortality or justice records, to answer questions NDTMS can't answer alone.</p></div>
-      <div class="stat"><span class="num">11%</span><p>reported involving patients, the public or practice partners in the research.</p></div>
-      <div class="stat"><span class="num">28%</span><p>made their data or code available, and 2.4% registered a protocol in advance.</p></div>
-    </div>
-    <div class="callout">
-      <p><b>From our interviews and observations:</b> people in treatment, frontline staff, provider organisations, OHID and local authorities often see NDTMS differently. They differ on how, why and what data are collected, and on how those data can be used and linked to other datasets.</p>
+<section id="findings" class="section tinted">
+  <div class="inner split">
+    <h2>What we learned</h2>
+    <div class="body">
+      <p>From our scoping review of NDTMS research. Full details are in the <a href="#outputs">outputs</a>.</p>
+      <table class="figures">
+        <caption class="visually-hidden">Key figures from the scoping review</caption>
+        <tbody>
+          <tr><th scope="row">83</th><td>studies used NDTMS data between 2005 and 2026: 45 journal articles, 34 government outputs and 4 doctoral theses.</td></tr>
+          <tr><th scope="row">30%</th><td>of these linked people's NDTMS records to other data, such as hospital, mortality or justice records, to answer questions NDTMS can't answer alone.</td></tr>
+          <tr><th scope="row">11%</th><td>reported involving patients, the public or practice partners in the research.</td></tr>
+          <tr><th scope="row">28%</th><td>made their data or code available, and 2.4% registered a protocol in advance.</td></tr>
+        </tbody>
+      </table>
+      <p>From our interviews and observations: people in treatment, frontline staff, provider organisations, OHID and local authorities often see NDTMS differently. They differ on how, why and what data are collected, and on how those data can be used and linked to other datasets.</p>
     </div>
   </div>
 </section>
 
 <!-- ===== OUTPUTS ===== -->
-<section id="outputs" class="section section-tint">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">Outputs</p>
-      <h2>Papers, talks and resources</h2>
-      <p class="sub">We'll add new outputs here as they're published.</p>
-    </div>
+<section id="outputs" class="section">
+  <div class="inner split">
+    <h2>Papers, talks and resources</h2>
+    <div class="body">
+      <p>We'll add new outputs here as they're published.</p>
+      <ul class="rows">
+        {% assign available = site.data.outputs | where: "status", "available" %}
+        {% for o in available %}
+          {% assign href = o.link %}
+          {% if o.use == "recording" %}{% assign href = site.recording_url %}{% endif %}
+          {% if o.use == "slides" %}{% assign href = site.slides_url %}{% endif %}
+        <li>
+          <span class="row-label">{{ o.type }}</span>
+          <div>
+            {% if href and href != "" %}
+            {% unless href contains "://" %}{% assign href = href | relative_url %}{% endunless %}
+            <a class="row-title" href="{{ href }}">{{ o.title }}</a>
+            {% else %}
+            <span class="row-title">{{ o.title }}</span> <span class="small">(link to follow)</span>
+            {% endif %}
+            <p class="small">{% if o.where %}{{ o.where }}{% endif %}{% if o.where and o.when %}, {% endif %}{% if o.when %}{{ o.when }}{% endif %}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
 
-    <div class="register outputs" role="list">
-      <div class="reg-head" aria-hidden="true"><span>TYPE</span><span>OUTPUT</span><span></span></div>
-      {% assign available = site.data.outputs | where: "status", "available" %}
-      {% for o in available %}
-        {% assign href = o.link %}
-        {% if o.use == "recording" %}{% assign href = site.recording_url %}{% endif %}
-        {% if o.use == "slides" %}{% assign href = site.slides_url %}{% endif %}
-        {% case o.type %}
-          {% when "Video" %}{% assign verb = "Watch" %}
-          {% when "Preprint" or "Paper" %}{% assign verb = "Read" %}
-          {% else %}{% assign verb = "View" %}
-        {% endcase %}
-      <div class="reg-row" role="listitem">
-        <span class="code">{{ o.type | upcase }}</span>
-        <div class="reg-main">
-          <p class="reg-title">{{ o.title }}</p>
-          <p class="reg-meta">{% if o.where %}{{ o.where }}{% endif %}{% if o.where and o.when %} · {% endif %}{% if o.when %}{{ o.when }}{% endif %}</p>
-        </div>
-        {% if href and href != "" %}
-        {% unless href contains "://" %}{% assign href = href | relative_url %}{% endunless %}
-        <a class="chip" href="{{ href }}">{{ verb }}<span class="sr"> {{ o.title }}</span></a>
-        {% else %}
-        <span class="chip chip-wait">Link to follow</span>
-        {% endif %}
-      </div>
-      {% endfor %}
+      {% assign upcoming = site.data.outputs | where: "status", "coming-soon" %}
+      {% if upcoming.size > 0 %}
+      <h3>Coming soon</h3>
+      <ul class="rows soon">
+        {% for o in upcoming %}
+        <li><span class="row-label">{{ o.type }}</span><div>{{ o.title }}</div></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
-
-    {% assign upcoming = site.data.outputs | where: "status", "coming-soon" %}
-    {% if upcoming.size > 0 %}
-    <h3 class="soon-head">Coming soon</h3>
-    <ul class="soon">
-      {% for o in upcoming %}
-      <li><span class="code">{{ o.type | upcase }}</span><span>{{ o.title }}</span></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
   </div>
 </section>
 
 <!-- ===== RECORDING ===== -->
-<section id="recording" class="section">
-  <div class="inner">
-    <div class="band band-lav">
-      <div class="band-main">
-        <p class="eyebrow">Recording · 16 November 2026 · 40 minutes</p>
-        <h2>Lunch and Learn: how routine data can help us understand the needs of people who use drugs and/or alcohol</h2>
-        <p>An online session bringing together two NIHR studies: UNITED, which looked at NDTMS, and a study using the Clinical Practice Research Datalink (CPRD) to estimate how often substance use and mental health conditions occur together. The speakers discuss how data are captured during care, reflect on using routine data for research, and share examples of what it can show.</p>
-        <div class="actions">
-          {% if site.recording_url != "" %}<a class="btn" href="{{ site.recording_url }}">Watch the recording</a>{% else %}<span class="btn btn-wait">Recording: link to follow</span>{% endif %}
-          {% if site.slides_url != "" %}{% assign slides = site.slides_url %}{% unless slides contains "://" %}{% assign slides = slides | relative_url %}{% endunless %}<a class="btn btn-alt" href="{{ slides }}">View the slides (PDF)</a>{% else %}<span class="btn btn-alt btn-wait">Slides: link to follow</span>{% endif %}
-        </div>
-      </div>
-      <div class="band-side">
-        <h3>Speakers</h3>
-        <ol class="speakers">
-          <li><b>Welcome, and what NDTMS and CPRD are</b><span>Emma Adams, Newcastle University</span></li>
-          <li><b>Understanding NDTMS in practice</b><span>Jo Kesten, University of Bristol</span></li>
-          <li><b>Using CPRD to study substance use and mental health</b><span>Kate Timmins, Newcastle University</span></li>
-          <li><b>Future opportunities for routine data</b><span>Justin Yang, University College London</span></li>
-        </ol>
-        <p class="fine">The CPRD study is independent research by the NIHR Public Health Policy Research Unit (PH-PRU Project 102999PE-21-A), commissioned and funded by the NIHR Policy Research Programme.</p>
-      </div>
+<section id="recording" class="section tinted">
+  <div class="inner split">
+    <h2>Recording</h2>
+    <div class="body">
+      <h3 class="feature-title">Lunch and Learn: how routine data can help us understand the needs of people who use drugs and/or alcohol</h3>
+      <p class="small">Online, 16 November 2026. 40 minutes.</p>
+      <p>An online session bringing together two NIHR studies: UNITED, which looked at NDTMS, and a study using the Clinical Practice Research Datalink (CPRD) to estimate how often substance use and mental health conditions occur together. The speakers discuss how data are captured during care, reflect on using routine data for research, and share examples of what it can show.</p>
+      <p class="links">
+        {% if site.recording_url != "" %}<a class="btn" href="{{ site.recording_url }}">Watch the recording</a>{% else %}<span class="small">Recording: link to follow.</span>{% endif %}
+        {% if site.slides_url != "" %}{% assign slides = site.slides_url %}{% unless slides contains "://" %}{% assign slides = slides | relative_url %}{% endunless %}<a href="{{ slides }}">View the slides (PDF)</a>{% else %}<span class="small">Slides: link to follow.</span>{% endif %}
+      </p>
+      <h3>Speakers</h3>
+      <ol class="speakers">
+        <li><b>Welcome, and what NDTMS and CPRD are</b><br>Emma Adams, Newcastle University</li>
+        <li><b>Understanding NDTMS in practice</b><br>Jo Kesten, University of Bristol</li>
+        <li><b>Using CPRD to study substance use and mental health</b><br>Kate Timmins, Newcastle University</li>
+        <li><b>Future opportunities for routine data</b><br>Justin Yang, University College London</li>
+      </ol>
+      <p class="small">The CPRD study is independent research by the NIHR Public Health Policy Research Unit (PH-PRU Project 102999PE-21-A), commissioned and funded by the NIHR Policy Research Programme.</p>
     </div>
   </div>
 </section>
 
 <!-- ===== TEAM ===== -->
-<section id="team" class="section section-tint">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">Team</p>
-      <h2>Who we are</h2>
-      <p class="sub">Researchers, data experts and people with experience of drug and alcohol services from across England.</p>
-    </div>
-    <ul class="people">
-      {% for p in site.data.team.people %}
-      <li class="person">
-        {% if p.photo != "" %}<img src="{{ '/assets/team/' | append: p.photo | relative_url }}" alt="" width="120" height="120" loading="lazy">{% else %}<span class="initials" aria-hidden="true">{{ p.name | slice: 0 }}</span>{% endif %}
-        <b>{% if p.link != "" %}<a href="{{ p.link }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</b>
-        <span>{{ p.institution }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-    <div class="team-extra">
-      <div class="le">
-        <b>Lived experience advisors</b>
-        <p>People who use or have used drug and alcohol services advised on every stage of the project, from the questions we asked to the recommendations we made.</p>
-      </div>
-      <div class="support">
-        <p class="code">Supporting the team</p>
-        <ul>
-          {% for s in site.data.team.support %}
-          <li><b>{% if s.link != "" %}<a href="{{ s.link }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</b><span>{{ s.role }}</span></li>
-          {% endfor %}
-        </ul>
-      </div>
+<section id="team" class="section">
+  <div class="inner split">
+    <h2>Who we are</h2>
+    <div class="body">
+      <p>Researchers, data experts and people with experience of drug and alcohol services from across England.</p>
+      <ul class="people">
+        {% for p in site.data.team.people %}
+        <li class="person">
+          {% if p.photo != "" %}<img src="{{ '/assets/team/' | append: p.photo | relative_url }}" alt="" width="104" height="104" loading="lazy">{% else %}<span class="initials" aria-hidden="true">{{ p.name | slice: 0 }}</span>{% endif %}
+          <b>{% if p.link != "" %}<a href="{{ p.link }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</b>
+          <span class="small">{{ p.institution }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <h3>Lived experience advisors</h3>
+      <p>People who use or have used drug and alcohol services advised on every stage of the project, from the questions we asked to the recommendations we made.</p>
+      <h3>Supporting the team</h3>
+      <ul class="plain">
+        {% for s in site.data.team.support %}
+        <li>{% if s.link != "" %}<a href="{{ s.link }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}, {{ s.role | downcase }}</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ===== PARTNERS ===== -->
 <section id="partners" class="section">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">Partners</p>
-      <h2>Working with national treatment providers</h2>
-      <p class="sub">Two national drug and alcohol treatment providers were partners in UNITED from the start. They helped shape the project, recruit lived-experience advisors, arrange interviews and observations in their services, and co-author our outputs.</p>
-    </div>
-    <div class="partner-grid">
+  <div class="inner split">
+    <h2>Partners</h2>
+    <div class="body">
+      <p>Two national drug and alcohol treatment providers were partners in UNITED from the start. They helped shape the project, recruit lived-experience advisors, arrange interviews and observations in their services, and co-author our outputs.</p>
       {% for o in site.data.team.partners %}
-      <article class="partner">
-        <a class="partner-logo" href="{{ o.link }}"><img src="{{ '/assets/img/partners/' | append: o.logo | relative_url }}" alt="{{ o.name }} logo" width="140" height="140" loading="lazy"></a>
-        <div class="partner-body">
+      <div class="partner">
+        <a class="partner-logo" href="{{ o.link }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/img/partners/' | append: o.logo | relative_url }}" alt="" width="88" height="88" loading="lazy"></a>
+        <div>
           <h3><a href="{{ o.link }}">{{ o.name }}</a></h3>
           <p>{{ o.about }}</p>
-          {% if o.people %}<p class="partner-people"><span class="code">With</span> {{ o.people | join: ", " }}</p>{% endif %}
+          {% if o.people %}<p class="small">With {{ o.people | join: ", " }}</p>{% endif %}
         </div>
-      </article>
+      </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
 <!-- ===== TERMS ===== -->
-<section class="section section-tint">
-  <div class="inner">
-    <div class="sec-head">
-      <p class="eyebrow">Terms we use</p>
-      <h2>A short glossary</h2>
+<section class="section">
+  <div class="inner split">
+    <h2>Terms we use</h2>
+    <div class="body">
+      <dl class="glossary">
+        <div><dt>NDTMS</dt><dd>National Drug Treatment Monitoring System. The national dataset that publicly commissioned drug and alcohol treatment services in England contribute to.</dd></div>
+        <div><dt>OHID</dt><dd>Office for Health Improvement and Disparities, part of the Department of Health and Social Care. It holds and manages NDTMS.</dd></div>
+        <div><dt>CPRD</dt><dd>Clinical Practice Research Datalink. Anonymised GP records from practices across the UK, used for research.</dd></div>
+        <div><dt>Data linkage</dt><dd>Joining one person's records across different datasets, such as treatment and hospital records, while protecting their identity.</dd></div>
+        <div><dt>Lived experience</dt><dd>Direct, personal experience of drug or alcohol use or treatment, past or present.</dd></div>
+        <div><dt>Scoping review</dt><dd>A structured search of published research to map what has been studied and where the gaps are.</dd></div>
+      </dl>
     </div>
-    <dl class="glossary">
-      <div><dt>NDTMS</dt><dd>National Drug Treatment Monitoring System. The national dataset that publicly commissioned drug and alcohol treatment services in England contribute to.</dd></div>
-      <div><dt>OHID</dt><dd>Office for Health Improvement and Disparities, part of the Department of Health and Social Care. It holds and manages NDTMS.</dd></div>
-      <div><dt>CPRD</dt><dd>Clinical Practice Research Datalink. Anonymised GP records from practices across the UK, used for research.</dd></div>
-      <div><dt>Data linkage</dt><dd>Joining one person's records across different datasets, such as treatment and hospital records, while protecting their identity.</dd></div>
-      <div><dt>Lived experience</dt><dd>Direct, personal experience of drug or alcohol use or treatment, past or present.</dd></div>
-      <div><dt>Scoping review</dt><dd>A structured search of published research to map what has been studied and where the gaps are.</dd></div>
-    </dl>
   </div>
 </section>
 
 <!-- ===== STAY IN TOUCH ===== -->
-<section id="contact" class="section">
-  <div class="inner">
-    <div class="band band-pink">
-      <div class="band-main">
-        <p class="eyebrow">Stay in touch</p>
-        <h2>Want to hear about our future work?</h2>
-        <p>UNITED is the first step towards a better treatment data system. If you'd like to hear about future studies, chances to get involved, or new findings, let us know.</p>
-      </div>
-      <div class="band-side contact-side">
-        {% if site.signup_form_url != "" %}
-        <a class="btn" href="{{ site.signup_form_url }}">Join our contact list</a>
-        <p class="fine">Or email us at <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.</p>
-        {% else %}
-        <p>Email us at</p>
-        <p class="email"><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a> <button type="button" class="copy" data-copy="{{ site.contact_email }}">Copy</button></p>
-        <p class="fine">Tell us a little about yourself and what you'd like to hear about.</p>
-        {% endif %}
-      </div>
+<section id="contact" class="section tinted">
+  <div class="inner split">
+    <h2>Stay in touch</h2>
+    <div class="body">
+      <p>UNITED is the first step towards a better treatment data system. If you'd like to hear about future studies, chances to get involved, or new findings, let us know.</p>
+      {% if site.signup_form_url != "" %}
+      <p><a class="btn" href="{{ site.signup_form_url }}">Join our contact list</a></p>
+      <p>Or email us at <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>.</p>
+      {% else %}
+      <p class="email"><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+      <p>Tell us a little about yourself and what you'd like to hear about.</p>
+      {% endif %}
     </div>
   </div>
 </section>
